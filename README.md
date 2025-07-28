@@ -1,51 +1,71 @@
-# Dataset Information
+# Retail Analytics: Customer Behavior Analysis using Dunnhumby Dataset
 
-## Required Dataset Files
-The following files are required for running the analysis:
+## Project Overview
+This project analyzes the Dunnhumby "The Complete Journey" dataset to derive actionable insights into customer shopping behavior, marketing campaign effectiveness, and competitive analysis in the retail sector. The analysis focuses on manufacturer performance, campaign effectiveness, and customer segmentation strategies.
 
-1. `transaction_data.csv` (135MB)
-   - Contains detailed transaction records
-   - Too large for GitHub, must be downloaded separately
+## Key Objectives
+- Analyze market dominance and competitive dynamics between manufacturers
+- Evaluate effectiveness of marketing campaigns and promotional strategies
+- Assess impact of coupons on sales performance
+- Develop data-driven recommendations for marketing strategy optimization
 
-2. `causal_data.csv` (664MB)
-   - Contains promotional and causal information
-   - Too large for GitHub, must be downloaded separately
+## Dataset Description
+The analysis uses the Dunnhumby dataset, which includes:
+- Transaction data from 2,500 households over two years
+- Demographic information for household segmentation
+- Campaign and promotional event details
+- Product information and categories
+- Coupon usage and redemption data
 
-3. Smaller data files included in repository:
-   - `campaign_desc.csv`
-   - `campaign_table.csv`
-   - `coupon.csv`
-   - `coupon_redempt.csv`
-   - `hh_demographic.csv`
-   - `product.csv`
+Note: Due to size limitations, the large dataset files are not included in this repository. Please refer to the data section for download instructions.
 
-## Data Size Limitations
-Due to GitHub's file size limitations (100MB per file), the following files are not included in this repository:
-- `transaction_data.csv` (135MB)
-- `causal_data.csv` (664MB)
+## Repository Structure
+```
+retail-analytics-dunnhumby/
+├── notebooks/
+│   └── AIBD.ipynb           # Main analysis notebook
+├── presentation/
+│   └── AIBD_Presentation.pptx  # Final presentation
+├── data/
+│   ├── README.md            # Data download instructions
+│   └── sample/              # Sample data files
+├── images/                  # Visualization outputs
+└── README.md
+```
 
-## Obtaining the Dataset
-1. Visit the Dunnhumby - The Complete Journey dataset website
-2. Download the required files
-3. Place the downloaded files in this directory
+## Key Findings
+1. Market Analysis:
+   - Manufacturer 69 shows strong market dominance with robust presence across key departments
+   - Significant competition from Manufacturer 693 in the DRUG GM sector
 
-## Data File Descriptions
+2. Campaign Effectiveness:
+   - Identified optimal display and mailer combinations for sales impact
+   - DISPLAY_2 with MAILER_D showed highest predicted sales (5.97)
 
-### transaction_data.csv
-- Contains household-level transactions
-- Fields: household_key, basket_id, day, product_id, quantity, sales_value, store_id, retail_disc, trans_time, week_no, coupon_disc, coupon_match_disc
+3. Coupon Strategy:
+   - 50% increase in distribution yields 15% sales boost
+   - Diminishing returns observed beyond 50% scaling
 
-### causal_data.csv
-- Contains promotion and display information
-- Fields: product_id, store_id, week_no, display, mailer
+4. Customer Segmentation:
+   - Age-based targeting opportunities identified
+   - Geographic and demographic insights for targeted marketing
 
-### Other Files
-- `campaign_desc.csv`: Campaign descriptions and types
-- `campaign_table.csv`: Campaign schedule and household assignments
-- `coupon.csv`: Coupon characteristics
-- `coupon_redempt.csv`: Coupon redemption details
-- `hh_demographic.csv`: Household demographics
-- `product.csv`: Product characteristics
+## Technologies Used
+- Python for data analysis
+- Jupyter Notebooks
+- Gradient Boosting and Random Forest models
+- Data visualization libraries (Matplotlib, Seaborn)
 
-## Data Privacy
-This dataset has been anonymized to protect customer privacy. Please handle the data responsibly and in accordance with applicable data protection regulations. 
+## Getting Started
+1. Clone this repository
+2. Follow instructions in `data/README.md` to obtain the dataset
+3. Install required dependencies
+4. Open the Jupyter notebook to explore the analysis
+
+## Contributors
+- Muskan Aggarwal
+- Navya Kondaveeti
+- Kaushalya Naidu
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details. 
